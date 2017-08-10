@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Flask!</h2>
+      <br>
+      <p>Click <a href="/">here</a> to go home.</p>
+      <form action="/chart" method="get">
+        <button type="submit" value="Show Charts">Charts</button>
+      </form>
+    </div>
+  </body>
+</html>
+{% endblock %}
