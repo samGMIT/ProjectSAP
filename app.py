@@ -33,6 +33,10 @@ def products():
 def about():
     return render_template('about.html')
 
+@app.route("/order_confirm", methods=['GET', 'POST'])
+def order_confirm():
+    return render_template('order_confirm.html', color=request.form['color'], quant=request.form['quant'], size=request.form['size'], model=request.form['model'], price=request.form['price'])
+
 @app.route("/chart")
 def chart():
     rates = getExchangeRates()
