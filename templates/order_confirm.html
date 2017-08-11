@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block body %}
+<head>
+  <title>Order Confirmation</title>
+</head>
+{% set a = (price|float)*(quant|float) %}
+<h1>Order Confirmation</h1>
+<p>Your order of {{quant}} model {{model}} shirts in {{color}} color and {{size}} size is confirmed. </p>
+<p>Your total is {{ "€{:.2f}".format(a|float) }} :)</p>
+<form action="/chart" method="get">
+    <button type="submit" value="Show Charts">Show currency exchange rates</button>
+</form>
+<br><br>
+<form action="/" method="get">
+	<button type="submit" value="Show Charts">Go back to Home Page</button>
+</form>
+
+{% endblock %}
