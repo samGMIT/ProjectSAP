@@ -2,7 +2,10 @@
 <html>
 <head>
 <style>
-ul {
+body{
+    text-align: center;
+}
+ul.topbar{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,16 +13,16 @@ ul {
     background-color: #333;
 }
 
-li {
+li.topbar{
     float: left;
     border-right:1px solid #bbb;
 }
 
-li:last-child {
+li.topbar:last-child {
     border-right: none;
 }
 
-li a {
+li.topbar a {
     display: block;
     color: white;
     text-align: center;
@@ -27,7 +30,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li.topbar a:hover:not(.active) {
     background-color: #111;
 }
 
@@ -38,11 +41,11 @@ li a:hover:not(.active) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
 
-<ul>
-	<li><a class="active" href="/">Home</a></li>
-	<li><a href="/contact">Contact</a></li>
-	<li><a href="/products">Products</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/chart">Chart</a></li>
+<ul class="topbar">
+	<li class="topbar"><a class="active" href="/">Home</a></li>
+	<li class="topbar"><a href="/contact">Contact</a></li>
+	<li class="topbar"><a href="/products">Products</a></li>
+	<li class="topbar"><a href="/about">About</a></li>
+	<li class="topbar"><a href="/chart">Rates</a></li>
 </ul>
 {% block body %}{% endblock %}
