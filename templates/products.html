@@ -1,0 +1,144 @@
+{% extends "template.html" %}
+<style>
+    li {
+        width: 200px;
+        min-height: 250px;
+        border: 1px solid #000;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        margin: 5px;
+        zoom: 1;
+        *display: inline;
+        _height: 250px;
+    }
+#webmenu{
+    width:340px;
+}
+</style>
+{% block body %}
+<head>
+  <title>Products</title>
+</head>
+<h1>Products</h1>
+<p>Products go here</p>
+<div class="row">
+  <div class="col-md-4">
+  	<h4 name="model">Model 1</h4>
+    <h5>Price: € 14,30</h5>
+    <img class="product" src="/static/1.jpg"/>
+    <form action="{{ url_for('order_confirm')}}" method="post">
+	    <input name="model" style="display:none;" value="1"></input>
+	  	<input name="price" style="display:none;" value="14.30"></input>
+	    <select name="size">
+	  		<option value="S">Small</option>
+	  		<option value="M">Medium</option>
+	  		<option value="L">Large</option>
+		</select><br><br>
+		Color:
+		<select name="color">
+	  		<option value="red">Red</option>
+	  		<option value="green">Green</option>
+	  		<option value="blue"> Blue</option>
+		</select><br><br>
+		Quantity: <input type="text" name="quant" value="1" size="2"><br><br>
+	        <button>Buy</button>
+    </form>
+  </div>
+
+  <div class="col-md-4">
+  	<h4 name="model">Model 2</h4>
+    <h5>Price: € 13,60</h5>
+    <img class="product" src="/static/2.jpg"/>
+    <form action="{{ url_for('order_confirm')}}" method="post">
+	    <input name="model" style="display:none;" value="2"></input>
+	  	<input name="price" style="display:none;" value="13.60"></input>
+	    <select name="size">
+	  		<option value="S">Small</option>
+	  		<option value="M">Medium</option>
+	  		<option value="L">Large</option>
+		</select><br><br>
+		Color:
+		<select name="color">
+	  		<option value="red">Red</option>
+	  		<option value="green">Green</option>
+	  		<option value="blue"> Blue</option>
+		</select><br><br>
+		Quantity: <input type="text" name="quant" value="1" size="2"><br><br>
+	        <button>Buy</button>
+    </form>
+  </div>
+
+  <div class="col-md-4">
+  	<h4 name="model">Model 3</h4>
+    <h5>Price: € 12,70</h5>
+    <img class="product" src="/static/3.jpg"/>
+    <form action="{{ url_for('order_confirm')}}" method="post">
+	    <input name="model" style="display:none;" value="3"></input>
+	  	<input name="price" style="display:none;" value="12.70"></input>
+	    <select name="size">
+	  		<option value="S">Small</option>
+	  		<option value="M">Medium</option>
+	  		<option value="L">Large</option>
+		</select><br><br>
+		Color:
+		<select name="color">
+	  		<option value="red">Red</option>
+	  		<option value="green">Green</option>
+	  		<option value="blue"> Blue</option>
+		</select><br><br>
+		Quantity: <input type="text" name="quant" value="1" size="2"><br><br>
+	        <button>Buy</button>
+    </form>
+  </div>
+</div>
+<!-- end of ROW -->
+<br><br><br><br>
+<div class="row">
+  <div class="col-md-4">
+  	<h4 name="model">Model 4</h4>
+    <h5>Price: € 16,20</h5>
+    <img class="product" src="/static/4.jpg"/>
+    <form action="{{ url_for('order_confirm')}}" method="post">
+	    <input name="model" style="display:none;" value="4"></input>
+	  	<input name="price" style="display:none;" value="16.20"></input>
+	    <select name="size">
+	  		<option value="S">Small</option>
+	  		<option value="M">Medium</option>
+	  		<option value="L">Large</option>
+		</select><br><br>
+		Color:
+		<select name="color">
+	  		<option value="red">Red</option>
+	  		<option value="green">Green</option>
+	  		<option value="blue"> Blue</option>
+		</select><br><br>
+		Quantity: <input type="text" name="quant" value="1" size="2"><br><br>
+	        <button>Buy</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+  	<h4 name="model">Model 5</h4>
+    <h5>Price: € 15,80</h5>
+    <img class="product" src="/static/5.jpg"/>
+    <form action="{{ url_for('order_confirm')}}" method="post">
+	    <input name="model" style="display:none;" value="5"></input>
+	  	<input name="price" style="display:none;" value="15.80"></input>
+	    <select name="size">
+	  		<option value="S">Small</option>
+	  		<option value="M">Medium</option>
+	  		<option value="L">Large</option>
+		</select><br><br>
+		Color:
+		<select name="color">
+	  		<option value="red">Red</option>
+	  		<option value="green">Green</option>
+	  		<option value="blue"> Blue</option>
+		</select><br><br>
+		Quantity: <input type="text" name="quant" value="1" size="2"><br><br>
+	        <button>Buy</button>
+    </form>
+  </div>
+  
+
+{% endblock %}
